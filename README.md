@@ -1,8 +1,8 @@
-# Next.js Pulp Template
+# Pulp Portal
 
-A modern, production-ready Next.js template for company projects featuring TypeScript, Tailwind CSS, Storybook, and comprehensive development tooling.
+Pulp Portal is B2B version of Pulp...<!-- TODO Need to add this -->
 
-## 🚀 Features
+## 🚀 Technology Stack
 
 - **Next.js 15** with App Router
 - **React 19** with TypeScript support
@@ -16,31 +16,23 @@ A modern, production-ready Next.js template for company projects featuring TypeS
 
 ## 📋 Prerequisites
 
-Before setting up a new project with this template, ensure you have:
+Before working on this project, ensure you have:
 
 - **Node.js** (version 18 or higher)
 - **npm** (latest version)
 - **AWS CLI** configured with appropriate permissions for CodeArtifact
 - **Git** for version control
 
-## 🛠️ Setting Up a New Project
+## 🛠️ Getting Started
 
-### 1. Clone the Template
+### 1. Clone the Repository
 
 ```bash
-git clone <repository-url> your-project-name
-cd your-project-name
+git clone <repository-url>
+cd Pulp-Portal
 ```
 
-### 2. Update Project Information
-
-Edit the following files to match your new project:
-
-- **package.json**: Update `name`, `version`, and `description`
-- **src/app/layout.tsx**: Update metadata title and description
-- **README.md**: Replace this README with project-specific documentation
-
-### 3. Install Dependencies
+### 2. Install Dependencies
 
 The project automatically handles CodeArtifact authentication during installation:
 
@@ -50,7 +42,7 @@ npm install
 
 > **Note**: The `preinstall` script automatically runs `login-codeartifact` to authenticate with AWS CodeArtifact for accessing private packages like `@pulp/ui`.
 
-### 4. Start Development
+### 3. Start Development
 
 ```bash
 npm run dev
@@ -142,7 +134,7 @@ export const Variant: Story = {
 ## 📁 Project Structure
 
 ```text
-nextjs_template/
+Pulp-Portal/
 ├── .storybook/              # Storybook configuration
 ├── public/                  # Static assets
 ├── scripts/                 # Build and utility scripts
@@ -151,8 +143,8 @@ nextjs_template/
 │   ├── app/                 # Next.js App Router pages
 │   │   ├── globals.css      # Global styles
 │   │   ├── layout.tsx       # Root layout
-│   │   └── page.tsx   
-│   └── components/          # Components application related   # Home page
+│   │   └── page.tsx         # Home page
+│   └── components/          # React components
 │   └── stories/             # Storybook stories directory
 ├── eslint.config.mjs        # ESLint configuration
 ├── next.config.ts           # Next.js configuration
@@ -203,25 +195,25 @@ npm run test:watch
 npm run test:coverage
 ```
 
-## 🏢 Company Integration
+## 🏢 Integration
 
 ### Private Package Registry
 
-This template is configured to use AWS CodeArtifact for private company packages:
+This project uses AWS CodeArtifact for private company packages:
 
 - **@pulp/ui**: Company UI component library
 - Authentication is handled automatically during `npm install`
 - Ensure your AWS CLI is configured with appropriate permissions
 
-### Customization Guidelines
+### Development Guidelines
 
-When creating new projects from this template:
+When working on this project:
 
-1. **Always** update package.json with your project details
-2. **Replace** this README with project-specific documentation
-3. **Configure** environment variables for your specific needs
-4. **Update** metadata in layout.tsx
-5. **Remove** unused dependencies
+1. **Follow** the existing code style and conventions
+2. **Write** comprehensive stories for new components in the stories directory
+3. **Use** Storybook for isolated component development
+4. **Write** tests using Vitest
+5. **Ensure** all tests pass before committing
 
 ## 🔗 Useful Links
 
@@ -241,4 +233,4 @@ When creating new projects from this template:
 
 ## 📄 License
 
-This template is proprietary and intended for internal company use only.
+This project is proprietary and intended for internal company use only.
